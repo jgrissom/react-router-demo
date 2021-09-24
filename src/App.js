@@ -8,11 +8,20 @@ import Products from "./components/Products";
 import About from "./components/About";
 import NoMatch from "./components/NoMatch";
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 
 function App() {
   return (
     <Router>
+      <div>
+        <Link to="/">Home</Link>&nbsp;|&nbsp;
+        <Link to="/products">Products</Link>&nbsp;|&nbsp;
+        <Link to="/about">About</Link>
+      </div>
+      <h2>
+        Super Cool Products for Sale!
+      </h2>
+      <hr />
       <Switch>
         <Route exact path="/">
           <Home />
@@ -27,6 +36,10 @@ function App() {
           <NoMatch />
         </Route>
       </Switch>
+      <hr />
+      <h5>
+        &copy; 2021 Super Cool Products, LLC
+      </h5>
     </Router>
   );
 }
