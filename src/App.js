@@ -6,6 +6,7 @@ import './App.css';
 import Home from "./components/Home";
 import Products from "./components/Products";
 import About from "./components/About";
+import NoMatch from "./components/NoMatch";
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route exact path="/about">
           <About />
+        </Route>
+        <Route>
+          <NoMatch />
         </Route>
       </Switch>
     </Router>
