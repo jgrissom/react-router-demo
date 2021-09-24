@@ -5,6 +5,7 @@
 import './App.css';
 import Home from "./components/Home";
 import Products from "./components/Products";
+import Product from "./components/Product";
 import About from "./components/About";
 import NoMatch from "./components/NoMatch";
 
@@ -33,6 +34,9 @@ function App() {
         </Route>
         <Route exact path="/products">
           <Products products={ products } />
+        </Route>
+        <Route path="/product/:id" exact>
+          <Product products={ products } />
         </Route>
         <Route exact path="/about">
           <About />
