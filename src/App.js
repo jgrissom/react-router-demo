@@ -29,21 +29,15 @@ function App() {
       </h2>
       <hr />
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
+        <Route exact path="/" component={ Home } />
         <Route exact path="/products">
           <Products products={ products } />
         </Route>
         <Route path="/product/:id" exact>
           <Product products={ products } />
         </Route>
-        <Route exact path="/about">
-          <About />
-        </Route>
-        <Route>
-          <NoMatch />
-        </Route>
+        <Route exact path="/about" component={ About } />
+        <Route component={ NoMatch } />
       </Switch>
       <hr />
       <h5>
