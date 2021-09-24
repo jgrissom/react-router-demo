@@ -4,10 +4,15 @@
 
 import './App.css';
 import Home from "./components/Home";
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <Home />
+    <Router>
+      <Route path="/home">
+        <Home />
+      </Route>
+    </Router>
   );
 }
 
